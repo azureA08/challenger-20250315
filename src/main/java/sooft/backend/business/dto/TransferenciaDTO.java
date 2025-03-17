@@ -7,6 +7,7 @@ import java.util.Calendar;
 
 @Data
 public class TransferenciaDTO {
+
     private BigDecimal importe;
     private String idEmpresa;
     private String cuentaDebito;
