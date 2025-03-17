@@ -20,5 +20,5 @@ public interface EmpresaService {
     //2. Otro que traiga las empresas que se adhirieron el último mes.
     List<Empresa> obtenerEmpresasAdheridasUltimoMes();
     //Para el punto 3 de adherir una empresa
-    StateOperacionEnum adhesionEmpreresa(EmpresaDTO empresaDTO);
+      Empresa adherirEmpresa(Empresa empresa);
 }

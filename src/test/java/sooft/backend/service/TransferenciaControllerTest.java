@@ -16,6 +16,8 @@ import sooft.backend.infrastructure.delivery.rest.TransferenciaController;
 import static org.mockito.Mockito.*;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
+
+import java.math.BigDecimal;
 import java.util.Arrays;
 import java.util.List;
 
@@ -39,14 +41,14 @@ public class TransferenciaControllerTest {
     public void testGetAllTransferencias() throws Exception {
         Transferencia transferencia1 = new Transferencia();
         transferencia1.setId(1L);
-        transferencia1.setImporte(1000.0);
+        transferencia1.setImporte(BigDecimal.valueOf(1000.0));
         transferencia1.setIdEmpresa("30-12345678-9");
         transferencia1.setCuentaDebito("123456789");
         transferencia1.setCuentaCredito("987654321");
 
         Transferencia transferencia2 = new Transferencia();
         transferencia2.setId(2L);
-        transferencia2.setImporte(2000.0);
+        transferencia2.setImporte(BigDecimal.valueOf(2000.0));
         transferencia2.setIdEmpresa("30-98765432-1");
         transferencia2.setCuentaDebito("111111111");
         transferencia2.setCuentaCredito("222222222");
@@ -65,7 +67,7 @@ public class TransferenciaControllerTest {
     public void testCreateTransferencia() throws Exception {
         Transferencia transferencia = new Transferencia();
         transferencia.setId(1L);
-        transferencia.setImporte(1000.0);
+        transferencia.setImporte(BigDecimal.valueOf(1000.0));
         transferencia.setIdEmpresa("30-12345678-9");
         transferencia.setCuentaDebito("123456789");
         transferencia.setCuentaCredito("987654321");
