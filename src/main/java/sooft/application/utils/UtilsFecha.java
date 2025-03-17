@@ -16,16 +16,6 @@ import java.util.Locale;
 
 public class UtilsFecha {
 
-    /***
-     * @return Fecha actul como int ,formato yyyyMMDD
-     */
-    public Integer getFechaActual() {
-        long ts = System.currentTimeMillis() / 1000;
-        Date currentDate = new Date(ts);
-        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-mm-dd");
-        String fechaStr = dateFormat.format(currentDate);
-        return Integer.getInteger(fechaStr.replace("-", ""));
-    }
     public static Calendar convertIntToCalendar(int dateInt) throws ParseException {
         SimpleDateFormat inputFormat = new SimpleDateFormat("yyyyMMdd", Locale.getDefault());
         String dateString = String.valueOf(dateInt);
@@ -45,6 +35,17 @@ public class UtilsFecha {
         Calendar calendar = Calendar.getInstance();
         calendar.setTime(date);
         return (calendar.get(Calendar.YEAR) + calendar.get(Calendar.MONTH) + calendar.get(Calendar.DAY_OF_MONTH));
+    }
+
+    /***
+     * @return Fecha actul como int ,formato yyyyMMDD
+     */
+    public Integer getFechaActual() {
+        long ts = System.currentTimeMillis() / 1000;
+        Date currentDate = new Date(ts);
+        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-mm-dd");
+        String fechaStr = dateFormat.format(currentDate);
+        return Integer.getInteger(fechaStr.replace("-", ""));
     }
 
     //Ejemplo formatoFecha= "dd/MM/yyyy"

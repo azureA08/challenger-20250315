@@ -7,6 +7,7 @@ import org.springframework.stereotype.Component;
 import sooft.backend.business.casouso.apitransaccion.ApiTransaccionDetalleService;
 import sooft.backend.domain.model.ApiTransaccionDetalle;
 
+import java.time.LocalDateTime;
 import java.util.List;
 import java.util.Optional;
 
@@ -40,4 +41,8 @@ public class ApiTransaccionDetalleAdapter implements ApiTransaccionDetalleServic
 
     }
 
+    public List<ApiTransaccionDetalle> findByFechaCreacionBetween(LocalDateTime start, LocalDateTime end)
+    {
+        return apiTransaccionDetalleRepository.findByFechaCreacionBetween(start,end);
+    }
 }

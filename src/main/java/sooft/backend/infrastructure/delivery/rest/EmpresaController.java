@@ -77,11 +77,13 @@ public class EmpresaController {
     public List<Empresa> findEmpresasConTransferenciasUltimoMes() {
         return empresaService.findEmpresasConTransferenciasUltimoMes();
     }
+
     //2. Otro que traiga las empresas que se adhirieron el último mes.
     @GetMapping("/adheridas-ultimo-mes")
     public List<Empresa> obtenerEmpresasAdheridasUltimoMes() {
         return empresaService.obtenerEmpresasAdheridasUltimoMes();
     }
+
     //3 Metodao para adherir una empresa
     @PostMapping("/adherir")
     public ResponseEntity<Empresa> adherirEmpresa(@RequestBody Empresa empresa) {

@@ -7,6 +7,8 @@ import org.springframework.stereotype.Component;
 import sooft.backend.business.casouso.transferencia.TransferenciaService;
 import sooft.backend.domain.model.Transferencia;
 
+import java.math.BigDecimal;
+import java.time.LocalDateTime;
 import java.util.List;
 import java.util.Optional;
 
@@ -39,4 +41,16 @@ public class TransferenciaJpaAdapter implements TransferenciaService {
         transferenciaJpaRepository.deleteById(id);
 
     }
+    @Override
+    public List<Transferencia> buscarPorImporteMayorQue(BigDecimal importe){
+        return transferenciaJpaRepository.buscarPorImporteMayorQue(importe);
+    }
+
+
+    @Override
+    public List<Transferencia> buscarPorFechaAnterior(LocalDateTime fecha){
+
+        return transferenciaJpaRepository.buscarPorFechaAnterior(fecha);
+    }
+
 }

@@ -40,9 +40,9 @@ public class EmpresaServiceImpl implements EmpresaService {
         empresaRepository.deleteById(id);
     }
 
-   // Punto 1 Uno que traiga las empresas que hicieron transferencias el último mes
-    public List<Empresa> findEmpresasConTransferenciasUltimoMes(){
-        return empresaRepository. findEmpresasConTransferenciasUltimoMes();
+    // Punto 1 Uno que traiga las empresas que hicieron transferencias el último mes
+    public List<Empresa> findEmpresasConTransferenciasUltimoMes() {
+        return empresaRepository.findEmpresasConTransferenciasUltimoMes();
     }
 
     //2. Otro que traiga las empresas que se adhirieron el último mes.
@@ -51,14 +51,15 @@ public class EmpresaServiceImpl implements EmpresaService {
         LocalDate fechaInicioMesAnterior = YearMonth.now().minusMonths(1).atDay(1);
         return empresaRepository.findEmpresasAdheridasUltimoMes(fechaInicioMesAnterior);
     }
+
     //3 Metodao para adherir una empresa
     public Empresa adherirEmpresa(Empresa empresa) {
         empresa.setFechaAdhesion(LocalDate.now());
         return empresaRepository.save(empresa);
     }
 
-    public  StateOperacionEnum adhesionEmpreresa(EmpresaDTO empresaDTO) {
-        if(empresaRepository.save(DatosMapper.INSTANCE.empresaDTOaEmpresa(empresaDTO)).getId() == null) {
+    public StateOperacionEnum adhesionEmpreresa(EmpresaDTO empresaDTO) {
+        if (empresaRepository.save(DatosMapper.INSTANCE.empresaDTOaEmpresa(empresaDTO)).getId() == null) {
             return StateOperacionEnum.ERROR;
         } else
             return StateOperacionEnum.VALIDO;

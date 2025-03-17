@@ -13,10 +13,13 @@ public interface EmpresaService {
     Optional<Empresa> findById(Long id);
 
     void deleteById(Long id);
+
     //Punto 1 Uno que traiga las empresas que hicieron transferencias el último mes
     List<Empresa> findEmpresasConTransferenciasUltimoMes();
+
     //2. Otro que traiga las empresas que se adhirieron el último mes.
     List<Empresa> obtenerEmpresasAdheridasUltimoMes();
+
     //Para el punto 3 de adherir una empresa
-      Empresa adherirEmpresa(Empresa empresa);
+    Empresa adherirEmpresa(Empresa empresa);
 }

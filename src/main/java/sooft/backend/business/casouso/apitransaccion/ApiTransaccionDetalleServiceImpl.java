@@ -6,6 +6,7 @@ import org.springframework.stereotype.Service;
 import sooft.backend.domain.model.ApiTransaccionDetalle;
 import sooft.backend.infrastructure.adapters.apitransacciondetalle.ApiTransaccionDetalleJpaRepository;
 
+import java.time.LocalDateTime;
 import java.util.List;
 import java.util.Optional;
 
@@ -37,6 +38,12 @@ public class ApiTransaccionDetalleServiceImpl implements ApiTransaccionDetalleSe
     public void deleteById(Long id) {
         apiTransaccionDetalleRepository.deleteById(id);
     }
+
+    @Override
+    public List<ApiTransaccionDetalle> findByFechaCreacionBetween(LocalDateTime start, LocalDateTime end) {
+        return apiTransaccionDetalleRepository.findByFechaCreacionBetween(start,end);
+    }
+
 
 
 }
