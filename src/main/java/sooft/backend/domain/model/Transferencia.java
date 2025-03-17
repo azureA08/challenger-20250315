@@ -24,6 +24,7 @@ public class Transferencia {
 
     @Column
     private BigDecimal importe;
+
     // String cuitEmpresa; Relación con Empresa=>Transferencia
     @Column
     private String idEmpresa;

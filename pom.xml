@@ -11,8 +11,8 @@
     <groupId>com.desa.</groupId>
     <artifactId>challenger2025-entrega</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>documentador</name>
-    <description>documentador</description>
+    <name>Challenger</name>
+    <description>Challenger</description>
 
     <properties>
         <java.version>17</java.version>

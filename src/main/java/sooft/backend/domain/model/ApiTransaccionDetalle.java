@@ -28,7 +28,6 @@ public class ApiTransaccionDetalle {
     private String cuit;
     @Column
     private String razonSocial;
-
     //private Calendar fechaAdhesion;
     //Fecha int yyyyMMDDDhhmmss  para facilitar ordenamiento,
     // comparaciones y extraccion de info que expone la Api
@@ -42,7 +41,6 @@ public class ApiTransaccionDetalle {
     private String cuentaDebito;
     @Column
     private String cuentaCredito;
-
     //private Calendar fechaTransaccion;
     //Fecha int yyyyMMDDDhhmmss  para facilitar ordenamiento,
     // comparaciones y extraccion de info que expone la Api

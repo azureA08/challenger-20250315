@@ -21,6 +21,7 @@ public class ApiTransaccionDetalleDTO {
     //Fecha int yyyyMMDDDhhmmss  para facilitar ordenamiento,
     // comparaciones y extraccion de info que expone la Api
     private int fechaAdhesion;
+
     //Informacion de la transaccion asociada a una empresa
     private BigDecimal importe;
     private String cuentaDebito;
