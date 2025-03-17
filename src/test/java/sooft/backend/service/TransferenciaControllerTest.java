@@ -13,13 +13,16 @@ import sooft.backend.domain.model.Transferencia;
 import sooft.backend.infrastructure.adapters.transferecia.TransferenciaJpaRepository;
 import sooft.backend.infrastructure.delivery.rest.TransferenciaController;
 
-import static org.mockito.Mockito.*;
-import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
-
 import java.math.BigDecimal;
 import java.util.Arrays;
 import java.util.List;
+
+import static org.mockito.Mockito.any;
+import static org.mockito.Mockito.when;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 public class TransferenciaControllerTest {
 

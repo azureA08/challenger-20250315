@@ -13,12 +13,16 @@ import sooft.backend.domain.model.Empresa;
 import sooft.backend.infrastructure.adapters.empresa.EmpresaJpaRepository;
 import sooft.backend.infrastructure.delivery.rest.EmpresaController;
 
-import static org.mockito.Mockito.*;
-import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 import java.time.LocalDate;
 import java.util.Arrays;
 import java.util.List;
+
+import static org.mockito.Mockito.any;
+import static org.mockito.Mockito.when;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 public class EmpresaControllerTest {
 

@@ -1,7 +1,5 @@
 package sooft.backend.business.casouso.empresa;
 
-import sooft.application.StateOperacionEnum;
-import sooft.backend.business.dto.EmpresaDTO;
 import sooft.backend.domain.model.Empresa;
 
 import java.util.List;
