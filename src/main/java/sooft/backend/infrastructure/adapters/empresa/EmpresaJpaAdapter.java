@@ -4,7 +4,10 @@ package sooft.backend.infrastructure.adapters.empresa;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+import sooft.application.StateOperacionEnum;
 import sooft.backend.business.casouso.empresa.EmpresaService;
+import sooft.backend.business.dto.EmpresaDTO;
+import sooft.backend.domain.mapper.DatosMapper;
 import sooft.backend.domain.model.Empresa;
 
 import java.util.List;
@@ -38,4 +41,20 @@ public class EmpresaJpaAdapter implements EmpresaService {
         empresaJpaRepository.deleteById(id);
 
     }
+
+    @Override
+    public List<Empresa> findEmpresasConTransferenciasUltimoMes() {
+        return empresaJpaRepository.findEmpresasConTransferenciasUltimoMes();
+    }
+
+    @Override
+    public List<Empresa> obtenerEmpresasAdheridasUltimoMes() {
+        return empresaJpaRepository.obtenerEmpresasAdheridasUltimoMes();
+    }
+
+    @Override
+    public Empresa adherirEmpresa(Empresa empresa) {
+        return empresaJpaRepository.adherirEmpresa(empresa);
+    }
+
 }
