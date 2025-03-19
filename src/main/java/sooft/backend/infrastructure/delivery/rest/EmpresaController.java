@@ -4,6 +4,7 @@ package sooft.backend.infrastructure.delivery.rest;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiResponse;
 import io.swagger.annotations.ApiResponses;
+import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
@@ -86,7 +87,7 @@ public class EmpresaController {
 
     //3 Metodao para adherir una empresa
     @PostMapping("/adherir")
-    public ResponseEntity<Empresa> adherirEmpresa(@RequestBody Empresa empresa) {
+    public ResponseEntity<Empresa> adherirEmpresa(@Valid @RequestBody Empresa empresa) {
         Empresa empresaAdherida = empresaService.adherirEmpresa(empresa);
         return new ResponseEntity<>(empresaAdherida, HttpStatus.CREATED);
     }

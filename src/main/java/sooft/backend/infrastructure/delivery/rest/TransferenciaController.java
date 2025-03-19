@@ -4,6 +4,7 @@ package sooft.backend.infrastructure.delivery.rest;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiResponse;
 import io.swagger.annotations.ApiResponses;
+import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -32,7 +33,7 @@ public class TransferenciaController {
             @ApiResponse(code = 500, message = "Error interno de servidor")})
     @PostMapping(produces = {MediaType.APPLICATION_JSON_VALUE, MediaType.APPLICATION_PROBLEM_JSON_VALUE}
     )
-    public ResponseEntity<Transferencia> saveTransferencia(@RequestBody Transferencia transferencia) {
+    public ResponseEntity<Transferencia> saveTransferencia(@Valid @RequestBody Transferencia transferencia) {
         transferencia.setId(0L);
         Transferencia savedTransferencia = transferenciaService.save(transferencia);
         return new ResponseEntity<>(savedTransferencia, HttpStatus.CREATED);
