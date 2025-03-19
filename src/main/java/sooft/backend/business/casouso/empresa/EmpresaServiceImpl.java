@@ -3,9 +3,6 @@ package sooft.backend.business.casouso.empresa;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import sooft.application.StateOperacionEnum;
-import sooft.backend.business.dto.EmpresaDTO;
-import sooft.backend.domain.mapper.DatosMapper;
 import sooft.backend.domain.model.Empresa;
 import sooft.backend.infrastructure.adapters.empresa.EmpresaJpaRepository;
 

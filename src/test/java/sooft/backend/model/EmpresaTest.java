@@ -3,9 +3,9 @@ package sooft.backend.model;
 import org.junit.jupiter.api.Test;
 import sooft.backend.domain.model.Empresa;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 import java.time.LocalDate;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class EmpresaTest {
 

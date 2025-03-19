@@ -11,12 +11,11 @@ import sooft.backend.business.casouso.empresa.EmpresaService;
 import sooft.backend.business.casouso.transferencia.TransferenciaService;
 import sooft.backend.business.dto.EmpresaDTO;
 import sooft.backend.business.dto.TransferenciaDTO;
-import sooft.backend.business.dto.validacion.DatosTransferenciaDTO;
 import sooft.backend.domain.mapper.DatosMapper;
 
 @RestController
 @RequestMapping("api/validacion/")
-public class ValidadorControlle {
+public class ValidadorController {
 
     private DatosMapper datosMapper;
     @Autowired
@@ -24,7 +23,7 @@ public class ValidadorControlle {
     @Autowired
     private TransferenciaService transferenciaService;
 
-    public ValidadorControlle(DatosMapper datosMapper) {
+    public ValidadorController(DatosMapper datosMapper) {
         this.datosMapper = datosMapper;
     }
 
