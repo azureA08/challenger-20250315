@@ -12,7 +12,6 @@ import java.time.LocalDate;
 @Table(name = "empresa")
 @Entity
 @Data
-@NoArgsConstructor
 public class Empresa {
 
     @Id
@@ -24,5 +23,6 @@ public class Empresa {
     private String razonSocial;
     @Column
     private LocalDate fechaAdhesion;
+
 
 }

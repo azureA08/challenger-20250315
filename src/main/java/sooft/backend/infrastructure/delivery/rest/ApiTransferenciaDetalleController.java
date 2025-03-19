@@ -14,6 +14,8 @@ import sooft.backend.domain.model.ApiTransaccionDetalle;
 import java.util.List;
 import java.util.Optional;
 
+@RestController
+@RequestMapping("api/ApiTransferenciaDetalle/")
 public class ApiTransferenciaDetalleController {
     @Autowired
     private ApiTransaccionDetalleService apiTransaccionDetalleService;
