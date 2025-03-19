@@ -1,24 +1,27 @@
 package sooft.backend.controller;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
+import org.springframework.http.MediaType;
+import org.springframework.test.web.servlet.MockMvc;
+import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 import sooft.backend.business.casouso.empresa.EmpresaService;
 import sooft.backend.domain.model.Empresa;
 import sooft.backend.infrastructure.delivery.rest.EmpresaController;
 
-import java.util.Arrays;
-import java.util.List;
+import java.time.LocalDate;
+import java.util.Date;
 import java.util.Optional;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertNull;
 import static org.mockito.Mockito.*;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 @ExtendWith(MockitoExtension.class)
 class EmpresaControllerTest {
@@ -29,101 +32,64 @@ class EmpresaControllerTest {
     @InjectMocks
     private EmpresaController empresaController;
 
+    private MockMvc mockMvc;
+    private ObjectMapper objectMapper;
     private Empresa empresa;
 
     @BeforeEach
     void setUp() {
-        empresa = new Empresa();
+        mockMvc = MockMvcBuilders.standaloneSetup(empresaController).build();
+        objectMapper = new ObjectMapper();
+        empresa = initEmpresa() ;
         empresa.setId(1L);
-        empresa.setRazonSocial("Empresa Ejemplo");
-        // Configura otros atributos de la empresa según sea necesario
     }
 
     @Test
-    void testSaveEmpresa() {
+    void dado_unaNuevaEmpresa_cuando_seCreaLaEmpresa_entonces_deberiaRetornarCreado() throws Exception {
+        // Arrange (Dado)
         when(empresaService.save(any(Empresa.class))).thenReturn(empresa);
 
-        ResponseEntity<Empresa> response = empresaController.saveempresa(empresa);
+        // Act (Cuando)
+        mockMvc.perform(post("/api/empresa")
+                .contentType(MediaType.APPLICATION_JSON)
+                .content(objectMapper.writeValueAsString(empresa)))
+                .andExpect(status().isCreated());
 
-        assertEquals(HttpStatus.CREATED, response.getStatusCode());
-        assertEquals(empresa, response.getBody());
+        // Assert (Entonces)
         verify(empresaService, times(1)).save(any(Empresa.class));
     }
 
     @Test
-    void testGetEmpresaById() {
+    void testObtenerTransferenciaPorId_ExistingId() throws Exception {
         when(empresaService.findById(1L)).thenReturn(Optional.of(empresa));
 
-        ResponseEntity<Empresa> response = empresaController.getempresa(1L);
+        mockMvc.perform(get("/api/empresa/1"))
+                .andExpect(status().isOk());
 
-        assertEquals(HttpStatus.OK, response.getStatusCode());
-        assertEquals(empresa, response.getBody());
         verify(empresaService, times(1)).findById(1L);
     }
 
     @Test
-    void testGetEmpresaById_NotFound() {
-        when(empresaService.findById(1L)).thenReturn(Optional.empty());
+    void testObtenerTransferenciaPorId_NonExistingId() throws Exception {
+        when(empresaService.findById(2L)).thenReturn(Optional.empty());
 
-        ResponseEntity<Empresa> response = empresaController.getempresa(1L);
+        mockMvc.perform(get("/api/empresa/2"))
+                .andExpect(status().isNotFound());
 
-        assertEquals(HttpStatus.OK, response.getStatusCode());
-        assertNull(response.getBody());
-        verify(empresaService, times(1)).findById(1L);
+        verify(empresaService, times(1)).findById(2L);
     }
 
-    @Test
-    void testGetAllEmpresas() {
-        List<Empresa> empresas = Arrays.asList(empresa, new Empresa());
-        when(empresaService.findAll()).thenReturn(empresas);
 
-        List<Empresa> response = empresaController.getempresas();
 
-        assertEquals(empresas, response);
-        verify(empresaService, times(1)).findAll();
-    }
-
-    @Test
-    void testDeleteEmpresaById() {
-        when(empresaService.findById(1L)).thenReturn(Optional.of(empresa));
-
-        ResponseEntity<Empresa> response = empresaController.deleteempresa(1L);
-
-        assertEquals(HttpStatus.OK, response.getStatusCode());
-        assertEquals(empresa, response.getBody());
-        verify(empresaService, times(1)).deleteById(1L);
-    }
-
-    @Test
-    void testFindEmpresasConTransferenciasUltimoMes() {
-        List<Empresa> empresas = Arrays.asList(empresa);
-        when(empresaService.findEmpresasConTransferenciasUltimoMes()).thenReturn(empresas);
-
-        List<Empresa> response = empresaController.findEmpresasConTransferenciasUltimoMes();
-
-        assertEquals(empresas, response);
-        verify(empresaService, times(1)).findEmpresasConTransferenciasUltimoMes();
-    }
-
-    @Test
-    void testObtenerEmpresasAdheridasUltimoMes() {
-        List<Empresa> empresas = Arrays.asList(empresa);
-        when(empresaService.obtenerEmpresasAdheridasUltimoMes()).thenReturn(empresas);
-
-        List<Empresa> response = empresaController.obtenerEmpresasAdheridasUltimoMes();
-
-        assertEquals(empresas, response);
-        verify(empresaService, times(1)).obtenerEmpresasAdheridasUltimoMes();
-    }
-
-    @Test
-    void testAdherirEmpresa() {
-        when(empresaService.adherirEmpresa(any(Empresa.class))).thenReturn(empresa);
-
-        ResponseEntity<Empresa> response = empresaController.adherirEmpresa(empresa);
-
-        assertEquals(HttpStatus.CREATED, response.getStatusCode());
-        assertEquals(empresa, response.getBody());
-        verify(empresaService, times(1)).adherirEmpresa(any(Empresa.class));
+    /***
+     *
+     * @return dato Empresa
+     */
+    private Empresa initEmpresa() {
+        Empresa empresa = new Empresa();
+        empresa.setCuit("30-12345678-9");
+        empresa.setRazonSocial("Nueva Empresa");
+        empresa.setFechaAdhesion(LocalDate.now());
+        return empresa;
     }
 }

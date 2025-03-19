@@ -4,6 +4,7 @@ import org.junit.jupiter.api.Test;
 import sooft.backend.domain.model.Transferencia;
 
 import java.math.BigDecimal;
+import java.time.LocalDate;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -31,13 +32,20 @@ class TransferenciaTest {
         assertEquals("CuentaC", transferencia.getCuentaCredito());
     }
 
+
+    /***
+     *
+     * @return dato Trnasferencia
+     */
     private static Transferencia initTransferencia() {
+
         Transferencia transferencia = new Transferencia();
 
         transferencia.setImporte(BigDecimal.valueOf(200.00));
         transferencia.setIdEmpresa("30-12345678-9");
         transferencia.setCuentaDebito("CuentaD");
         transferencia.setCuentaCredito("CuentaC");
+        transferencia.setFechaTransaccion( LocalDate.now());
         return transferencia;
     }
 }
