@@ -6,15 +6,12 @@ import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
-import sooft.backend.business.casouso.apitransaccion.ApiTransaccionDetalleService;
 import sooft.backend.business.casouso.apitransaccion.ApiTransaccionDetalleServiceImpl;
 import sooft.backend.domain.model.ApiTransaccionDetalle;
 import sooft.backend.infrastructure.adapters.apitransacciondetalle.ApiTransaccionDetalleJpaRepository;
 
 import java.math.BigDecimal;
-import java.time.LocalDate;
 import java.util.Arrays;
-import java.util.Date;
 import java.util.List;
 import java.util.Optional;
 
