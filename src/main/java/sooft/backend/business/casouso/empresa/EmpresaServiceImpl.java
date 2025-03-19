@@ -58,10 +58,5 @@ public class EmpresaServiceImpl implements EmpresaService {
         return empresaRepository.save(empresa);
     }
 
-    public StateOperacionEnum adhesionEmpreresa(EmpresaDTO empresaDTO) {
-        if (empresaRepository.save(DatosMapper.INSTANCE.empresaDTOaEmpresa(empresaDTO)).getId() == null) {
-            return StateOperacionEnum.ERROR;
-        } else
-            return StateOperacionEnum.VALIDO;
-    }
+
 }

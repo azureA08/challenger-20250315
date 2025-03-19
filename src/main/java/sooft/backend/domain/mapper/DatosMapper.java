@@ -17,18 +17,16 @@ public interface DatosMapper {
     DatosMapper INSTANCE = Mappers.getMapper(DatosMapper.class);
 
     @Mapping(source = "id", target = "id")
-    @Valid
     Empresa empresaDTOaEmpresa(EmpresaDTO empresaDTO);
 
-    @Valid
     @Mapping(source = "id", target = "id")
     Transferencia transferenciaDTOaTransferencia(TransferenciaDTO transferenciaDTO);
 
-    @Valid
+
     @Mapping(source = "id", target = "id")
     EmpresaDTO empresaAempresaDTO(Empresa empresa);
 
-    @Valid
+
     @Mapping(source = "id", target = "id")
-    TransferenciaDTO transferenciaAtransferenciaDTO(Transferencia transferencia);
+    Transferencia transferenciaAtransferenciaDTO(@Valid TransferenciaDTO transferencia);
 }

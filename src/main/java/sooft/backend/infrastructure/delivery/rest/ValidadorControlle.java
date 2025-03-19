@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 import sooft.backend.business.casouso.empresa.EmpresaService;
 import sooft.backend.business.casouso.transferencia.TransferenciaService;
 import sooft.backend.business.dto.EmpresaDTO;
+import sooft.backend.business.dto.TransferenciaDTO;
 import sooft.backend.business.dto.validacion.DatosTransferenciaDTO;
 import sooft.backend.domain.mapper.DatosMapper;
 
@@ -28,16 +29,16 @@ public class ValidadorControlle {
     }
 
     @PostMapping("/empresas")
-    public ResponseEntity<String> crearEmpresa(@RequestBody EmpresaDTO empresaDTO) {
+    public ResponseEntity<String> crearEmpresa(@Valid @RequestBody EmpresaDTO empresaDTO) {
         //TODO Lógica para crear la empresa
         empresaService.save(datosMapper.empresaDTOaEmpresa(empresaDTO));
         return ResponseEntity.ok("Empresa creada con éxito");
     }
 
     @PostMapping("/transferencias")
-    public ResponseEntity<String> crearTransferencia(@Valid @RequestBody DatosTransferenciaDTO transferenciaDTO) {
+    public ResponseEntity<String> crearTransferencia(@Valid @RequestBody TransferenciaDTO transferenciaDTO) {
         //TODO Lógica para crear la transferencia
-        transferenciaService.save(datosMapper.empresaDTOaEmpresa(transferenciaDTO));
+        transferenciaService.save(datosMapper.transferenciaAtransferenciaDTO(transferenciaDTO));
         return ResponseEntity.ok("Transferencia creada con éxito");
     }
 

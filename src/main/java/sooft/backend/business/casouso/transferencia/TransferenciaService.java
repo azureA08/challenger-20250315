@@ -18,7 +18,5 @@ public interface TransferenciaService {
 
     List<Transferencia> buscarPorImporteMayorQue(BigDecimal importe);
 
-    List<Transferencia> buscarPorImporteMayorQue(LocalDateTime fecha);
-
     List<Transferencia> buscarPorFechaAnterior(LocalDateTime fecha);
 }
