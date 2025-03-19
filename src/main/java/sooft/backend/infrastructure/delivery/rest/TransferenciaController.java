@@ -17,7 +17,7 @@ import java.util.List;
 import java.util.Optional;
 
 @RestController
-@RequestMapping("api/transferencia")
+@RequestMapping("api/transferencia/")
 @RequiredArgsConstructor
 public class TransferenciaController {
 
