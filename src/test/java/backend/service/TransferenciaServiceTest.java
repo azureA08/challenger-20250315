@@ -1,5 +1,6 @@
 package backend.service;
 
+import com.soft.backend.business.casouso.transferencia.TransferenciaService;
 import com.soft.backend.business.casouso.transferencia.TransferenciaServiceImpl;
 import com.soft.backend.domain.model.Transferencia;
 import com.soft.backend.infraestructure.adapters.transferecia.TransferenciaJpaRepository;

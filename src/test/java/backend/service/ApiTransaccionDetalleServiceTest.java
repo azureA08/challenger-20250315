@@ -1,5 +1,6 @@
 package backend.service;
 
+import com.soft.backend.business.casouso.apitransaccion.ApiTransaccionDetalleService;
 import com.soft.backend.business.casouso.apitransaccion.ApiTransaccionDetalleServiceImpl;
 import com.soft.backend.domain.model.ApiTransaccionDetalle;
 import com.soft.backend.infraestructure.adapters.apitransacciondetalle.ApiTransaccionDetalleJpaRepository;

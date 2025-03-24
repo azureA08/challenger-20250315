@@ -89,7 +89,7 @@ public class EmpresaController {
 
     //3 Metodao para adherir una empresa
     @PostMapping("/adherir")
-    public ResponseEntity<Empresa> adherirEmpresa(@Valid @RequestBody Empresa empresa) {
+    public ResponseEntity<Empresa> adherirEmpresa( @RequestBody Empresa empresa) {
         Empresa empresaAdherida = empresaService.adherirEmpresa(empresa);
         return new ResponseEntity<>(empresaAdherida, HttpStatus.CREATED);
     }

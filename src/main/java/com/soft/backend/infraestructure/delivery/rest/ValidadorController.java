@@ -30,14 +30,14 @@ public class ValidadorController {
     }
 
     @PostMapping("/empresas")
-    public ResponseEntity<String> crearEmpresa(@Valid @RequestBody EmpresaDTO empresaDTO) {
+    public ResponseEntity<String> crearEmpresa( @RequestBody EmpresaDTO empresaDTO) {
         //TODO Lógica para crear la empresa
         empresaService.save(datosMapper.empresaDTOaEmpresa(empresaDTO));
         return ResponseEntity.ok("Empresa creada con éxito");
     }
 
     @PostMapping("/transferencias")
-    public ResponseEntity<String> crearTransferencia(@Valid @RequestBody TransferenciaDTO transferenciaDTO) {
+    public ResponseEntity<String> crearTransferencia( @RequestBody TransferenciaDTO transferenciaDTO) {
         //TODO Lógica para crear la transferencia
         transferenciaService.save(datosMapper.transferenciaAtransferenciaDTO(transferenciaDTO));
         return ResponseEntity.ok("Transferencia creada con éxito");

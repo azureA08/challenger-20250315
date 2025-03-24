@@ -15,7 +15,6 @@ import java.math.BigDecimal;
 @Table(name = "ApiTransaccionDetalle")
 @Entity
 @Data
-@NoArgsConstructor
 public class ApiTransaccionDetalle {
 
     @Id

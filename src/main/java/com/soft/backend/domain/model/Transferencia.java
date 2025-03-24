@@ -14,7 +14,6 @@ import java.time.LocalDate;
 @Table(name = "transferencia")
 @Entity
 @Data
-@NoArgsConstructor
 public class Transferencia {
 
     @Id

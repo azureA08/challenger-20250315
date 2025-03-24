@@ -1,5 +1,6 @@
 package backend.service;
 
+import com.soft.backend.business.casouso.empresa.EmpresaService;
 import com.soft.backend.business.casouso.empresa.EmpresaServiceImpl;
 import com.soft.backend.domain.model.Empresa;
 import com.soft.backend.infraestructure.adapters.empresa.EmpresaJpaRepository;

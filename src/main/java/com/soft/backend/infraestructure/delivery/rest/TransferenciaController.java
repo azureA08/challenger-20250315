@@ -35,7 +35,7 @@ public class TransferenciaController {
             @ApiResponse(code = 500, message = "Error interno de servidor")})
     @PostMapping(produces = {MediaType.APPLICATION_JSON_VALUE, MediaType.APPLICATION_PROBLEM_JSON_VALUE}
     )
-    public ResponseEntity<Transferencia> saveTransferencia(@Valid @RequestBody Transferencia transferencia) {
+    public ResponseEntity<Transferencia> saveTransferencia( @RequestBody Transferencia transferencia) {
         transferencia.setId(0L);
         Transferencia savedTransferencia = transferenciaService.save(transferencia);
         return new ResponseEntity<>(savedTransferencia, HttpStatus.CREATED);
