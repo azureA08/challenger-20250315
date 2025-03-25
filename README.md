@@ -76,6 +76,7 @@ return new ResponseEntity<>(empresaAdherida, HttpStatus.CREATED);
 # TODO  6. billetera Web3 .
 
 #TODO 
+    WEB 3 https://remix-project.org/?lang=es
     Discovery sobre hard walle ? 
     Discovery Sobre 
         El protocolo de binance es pass + Google authenticator 
