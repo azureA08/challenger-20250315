@@ -1,6 +1,6 @@
 package com.backend.domain.mapper;
 
-import com.backend.business.casouso.dto.TrasferenciaDetalleDto;
+import com.backend.domain.casouso.dto.TrasferenciaDetalleDto;
 import com.backend.domain.model.Transferencia;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;

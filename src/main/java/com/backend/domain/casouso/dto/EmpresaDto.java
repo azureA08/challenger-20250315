@@ -1,4 +1,4 @@
-package com.backend.business.casouso.dto;
+package com.backend.domain.casouso.dto;
 
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;

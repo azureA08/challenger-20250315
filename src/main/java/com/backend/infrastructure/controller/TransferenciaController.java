@@ -1,7 +1,7 @@
 package com.backend.infrastructure.controller;
 
 
-import com.backend.business.casouso.transferencia.TransferenciaService;
+import com.backend.domain.casouso.transferencia.TransferenciaService;
 import com.backend.domain.model.Transferencia;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;

@@ -1,4 +1,4 @@
-package com.backend.business.casouso.empresa;
+package com.backend.domain.casouso.empresa;
 
 import com.backend.domain.model.Empresa;
 

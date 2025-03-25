@@ -1,4 +1,4 @@
-package com.backend.business.casouso.transferencia;
+package com.backend.domain.casouso.transferencia;
 
 import com.backend.domain.model.Transferencia;
 import com.backend.infrastructure.repositories.TransferenciaRepository;

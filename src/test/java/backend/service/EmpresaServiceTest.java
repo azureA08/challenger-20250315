@@ -1,7 +1,7 @@
 package backend.service;
 
 
-import com.backend.business.casouso.empresa.EmpresaServiceImpl;
+import com.backend.domain.casouso.empresa.EmpresaServiceImpl;
 import com.backend.domain.model.Empresa;
 import com.backend.infrastructure.repositories.EmpresaRepository;
 import org.junit.jupiter.api.BeforeEach;

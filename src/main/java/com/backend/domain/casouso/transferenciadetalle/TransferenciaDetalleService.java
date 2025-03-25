@@ -1,4 +1,4 @@
-package com.backend.business.casouso.transferenciadetalle;
+package com.backend.domain.casouso.transferenciadetalle;
 
 import com.backend.domain.model.TransferenciaDetalle;
 

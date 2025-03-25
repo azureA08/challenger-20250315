@@ -1,7 +1,7 @@
 package com.backend.infrastructure.controller;
 
 
-import com.backend.business.casouso.empresa.EmpresaService;
+import com.backend.domain.casouso.empresa.EmpresaService;
 import com.backend.domain.model.Empresa;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiResponse;

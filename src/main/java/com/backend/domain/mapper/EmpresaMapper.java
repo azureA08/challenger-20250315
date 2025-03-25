@@ -1,6 +1,6 @@
 package com.backend.domain.mapper;
 
-import com.backend.business.casouso.dto.EmpresaDto;
+import com.backend.domain.casouso.dto.EmpresaDto;
 import com.backend.domain.model.Empresa;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;

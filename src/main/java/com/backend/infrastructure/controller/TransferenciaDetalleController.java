@@ -1,7 +1,7 @@
 package com.backend.infrastructure.controller;
 
 
-import com.backend.business.casouso.transferenciadetalle.TransferenciaDetalleService;
+import com.backend.domain.casouso.transferenciadetalle.TransferenciaDetalleService;
 import com.backend.domain.model.TransferenciaDetalle;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiResponse;

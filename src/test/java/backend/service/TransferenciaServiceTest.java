@@ -1,6 +1,6 @@
 package backend.service;
 
-import com.backend.business.casouso.transferencia.TransferenciaServiceImpl;
+import com.backend.domain.casouso.transferencia.TransferenciaServiceImpl;
 import com.backend.domain.model.Transferencia;
 import com.backend.infrastructure.repositories.TransferenciaRepository;
 import org.junit.jupiter.api.BeforeEach;
