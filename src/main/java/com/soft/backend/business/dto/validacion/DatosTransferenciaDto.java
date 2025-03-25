@@ -1,4 +1,4 @@
-package com.soft.backend.domain.validacion;
+package com.soft.backend.business.dto.validacion;
 
 
 import jakarta.validation.constraints.NotBlank;
@@ -7,7 +7,7 @@ import jakarta.validation.constraints.Positive;
 import lombok.Data;
 
 @Data
-public class DatosTransferencia {
+public class DatosTransferenciaDto {
 
     @NotNull(message = "El importe no puede ser nulo")
     @Positive(message = "El importe debe ser positivo")

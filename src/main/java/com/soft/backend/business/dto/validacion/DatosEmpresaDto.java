@@ -1,4 +1,4 @@
-package com.soft.backend.domain.validacion;
+package com.soft.backend.business.dto.validacion;
 
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
@@ -8,7 +8,7 @@ import lombok.Data;
 import java.time.LocalDate;
 
 @Data
-public class DatosEmpresa {
+public class DatosEmpresaDto {
 
     @NotBlank(message = "El CUIT no puede estar en blanco")
     @Pattern(regexp = "\\d{2}-\\d{8}-\\d{1}", message = "Formato de CUIT inválido")
