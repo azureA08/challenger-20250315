@@ -67,6 +67,7 @@ return new ResponseEntity<>(empresaAdherida, HttpStatus.CREATED);
 # POC -0001 2025 Update 20250317.
 # 
 # SISTEMA DE GESTION FINANCIERA 
+#
 # DOING 1. ApiTransferencia Se refactoriza POC -0001 ;para implemenetar el api gateway de transferecias, proyecto Sistema de Gestion de transferencias SGT-08.
 # TODO  2. Api Payments /Pagos -Cobros y Activo extiende SGT-08.
 # TODO  3. Api Inversion gestion 
