@@ -1,6 +1,6 @@
 package backend.model;
 
-import com.soft.backend.domain.model.ApiTransaccionDetalle;
+import com.backend.domain.model.TransferenciaDetalle;
 import org.junit.jupiter.api.Test;
 
 import java.math.BigDecimal;
@@ -8,18 +8,16 @@ import java.math.BigDecimal;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 
-class ApiTransaccionDetalleTest {
+class TransaccionDetalleTest {
 
-    private int nuevaFechaAdhesion = 20250315;
-    private int nuevaFechaTransaccion = 20250315;
 
     @Test
-    void testApiTransaccionDetalleConstructorYGetters() {
+    void testTransferenciaDetalleConstructorYGetters() {
 
-        int fechaAdhesion = 20250315;
-        int fechaTransaccion = 20250315;
+        int fechaAdhesion = 20250325;
+        int fechaTransferencia = 20250325;
 
-        ApiTransaccionDetalle detalle = initApiTransaccionDetalle();
+        TransferenciaDetalle detalle = initTransferenciaDetalle();
 
         assertEquals("30-12345678-9", detalle.getCuit());
         assertEquals("Nueva Empresa", detalle.getRazonSocial());
@@ -30,36 +28,36 @@ class ApiTransaccionDetalleTest {
         assertEquals("CuentaD", detalle.getCuentaDebito());
         assertEquals("CuentaC", detalle.getCuentaCredito());
 
-        assertEquals(fechaTransaccion, detalle.getFechaTransaccion());
+        assertEquals(fechaTransferencia, detalle.getFechaTransferencia());
     }
 
     @Test
-    void testApiTransaccionDetalleSetters() {
+    void testTransferenciaDetalleSetters() {
 
-        ApiTransaccionDetalle detalle = initApiTransaccionDetalle();
+        TransferenciaDetalle detalle = initTransferenciaDetalle();
 
         assertEquals("30-12345678-9", detalle.getCuit());
         assertEquals("Nueva Empresa", detalle.getRazonSocial());
-        assertEquals(nuevaFechaAdhesion, detalle.getFechaAdhesion());
+        assertEquals(20250325, detalle.getFechaAdhesion());
         assertEquals(BigDecimal.valueOf(200.00), detalle.getImporte());
         assertEquals("30-12345678-9", detalle.getCuit());
         assertEquals("CuentaD", detalle.getCuentaDebito());
         assertEquals("CuentaC", detalle.getCuentaCredito());
-        assertEquals(nuevaFechaTransaccion, detalle.getFechaTransaccion());
+        assertEquals(20250325, detalle.getFechaTransferencia());
     }
 
-    private ApiTransaccionDetalle initApiTransaccionDetalle() {
+    private TransferenciaDetalle initTransferenciaDetalle() {
 
-        ApiTransaccionDetalle detalle = new ApiTransaccionDetalle();
+        TransferenciaDetalle detalle = new TransferenciaDetalle();
 
 
         detalle.setRazonSocial("Nueva Empresa");
-        detalle.setFechaAdhesion(nuevaFechaAdhesion);
+        detalle.setFechaAdhesion(20250325);
         detalle.setImporte(BigDecimal.valueOf(200.00));
         detalle.setCuit("30-12345678-9");
-        detalle.setCuentaDebito("CuentaD");
         detalle.setCuentaCredito("CuentaC");
-        detalle.setFechaTransaccion(nuevaFechaTransaccion);
+        detalle.setCuentaDebito("CuentaD");
+        detalle.setFechaTransferencia(20250325);
         return detalle;
     }
 }

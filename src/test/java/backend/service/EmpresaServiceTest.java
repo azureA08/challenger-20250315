@@ -1,9 +1,9 @@
 package backend.service;
 
-import com.soft.backend.business.casouso.empresa.EmpresaService;
-import com.soft.backend.business.casouso.empresa.EmpresaServiceImpl;
-import com.soft.backend.domain.model.Empresa;
-import com.soft.backend.infraestructure.adapters.empresa.EmpresaJpaRepository;
+
+import com.backend.business.casouso.empresa.EmpresaServiceImpl;
+import com.backend.domain.model.Empresa;
+import com.backend.infrastructure.repositories.EmpresaRepository;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -23,7 +23,7 @@ import static org.mockito.Mockito.*;
 class EmpresaServiceTest {
 
     @Mock
-    private EmpresaJpaRepository empresaRepository;
+    private EmpresaRepository empresaRepository;
 
     @InjectMocks
     private EmpresaServiceImpl empresaService;
@@ -102,6 +102,8 @@ class EmpresaServiceTest {
 
     @Test
     void testAdherirEmpresa() {
+
+        empresa.setId(Long.valueOf(1L));
         when(empresaRepository.save(any(Empresa.class))).thenReturn(empresa);
 
         Empresa adheridaEmpresa = empresaService.adherirEmpresa(empresa);

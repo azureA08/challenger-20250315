@@ -1,6 +1,7 @@
 package backend.model;
 
-import com.soft.backend.domain.model.Empresa;
+
+import com.backend.domain.model.Empresa;
 import org.junit.jupiter.api.Test;
 
 import java.time.LocalDate;

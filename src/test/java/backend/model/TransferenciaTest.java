@@ -1,6 +1,7 @@
 package backend.model;
 
-import com.soft.backend.domain.model.Transferencia;
+
+import com.backend.domain.model.Transferencia;
 import org.junit.jupiter.api.Test;
 
 import java.math.BigDecimal;
@@ -22,7 +23,7 @@ class TransferenciaTest {
         transferencia.setIdEmpresa("30-12345678-9");
         transferencia.setCuentaDebito("CuentaD");
         transferencia.setCuentaCredito("CuentaC");
-        transferencia.setFechaTransaccion(LocalDate.now());
+        transferencia.setFechaTransferencia(LocalDate.now());
         return transferencia;
     }
 

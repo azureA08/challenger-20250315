@@ -1,5 +1,0 @@
-package com.documentador.backend.casodeuso.builder;
-En este paquete se implementa los builder de los DTO ;para los caso de calculos
-, se implemetan los helpers correspondientes y validaciones de negocio se implementan
-en clase  Validacion.
-                                                                       *

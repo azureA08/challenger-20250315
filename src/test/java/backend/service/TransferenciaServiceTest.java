@@ -1,9 +1,8 @@
 package backend.service;
 
-import com.soft.backend.business.casouso.transferencia.TransferenciaService;
-import com.soft.backend.business.casouso.transferencia.TransferenciaServiceImpl;
-import com.soft.backend.domain.model.Transferencia;
-import com.soft.backend.infraestructure.adapters.transferecia.TransferenciaJpaRepository;
+import com.backend.business.casouso.transferencia.TransferenciaServiceImpl;
+import com.backend.domain.model.Transferencia;
+import com.backend.infrastructure.repositories.TransferenciaRepository;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -23,7 +22,7 @@ import static org.mockito.Mockito.*;
 class TransferenciaServiceTest {
 
     @Mock
-    private TransferenciaJpaRepository transferenciaRepository;
+    private TransferenciaRepository transferenciaRepository;
 
     @InjectMocks
     private TransferenciaServiceImpl transferenciaService;
