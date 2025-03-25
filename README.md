@@ -1,10 +1,10 @@
 # POC -0001-20250315
 
-POC -0001 Sooft 2025
+POC -0001  2025
 
-Challenge back:
+POC -0001 back:
 
-     El challenge que se trata de generar los siguientes 3 endpoints:
+     El POC  trata de generar los siguientes 3 endpoints:
     
      1.Uno que traiga las empresas que hicieron transferencias el último mes
      
@@ -70,11 +70,18 @@ return new ResponseEntity<>(empresaAdherida, HttpStatus.CREATED);
 #
 # DOING 1. ApiTransferencia Se refactoriza POC -0001 ;para implemenetar el api gateway de transferecias, proyecto Sistema de Gestion de transferencias SGT-08.
 # TODO  2. Api Payments /Pagos -Cobros y Activo extiende SGT-08.
-# TODO  3. Api Inversion gestion 
-# TODO  4. Billetera Virtual , BV-00001
-# TODO  5. billetera Web3
+# TODO  3. Api Inversion gestion .
+# TODO  4. Reporteria y Tablero de Gestion Financiera.
+# TODO  5. Billetera Virtual , BV-00001.
+# TODO  6. billetera Web3 .
 
-# Wallet WEB3.
+#TODO 
+    Discovery sobre hard walle ? 
+    Discovery Sobre 
+        El protocolo de binance es pass + Google authenticator 
+
+# Discovery Wallet WEB3.
+
     Una billetera Web3 es esencial; para cualquiera que busque interactuar con aplicaciones descentralizadas (dApps) ,
 o administrar criptomonedas. 
 
