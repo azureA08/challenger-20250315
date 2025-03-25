@@ -24,12 +24,12 @@ Realizar test unitarios.
 
 Aclarcaiones:
 
-Agrege al modelo una clase ApiTransaccionDetalle , con el fin de tener los dato de La empresa adherida con la
+    Agrege al modelo una clase ApiTransaccionDetalle , con el fin de tener los dato de La empresa adherida con la
 transferencia en una misma tabla ApiTransaccionDetalle y así mejorar los tiempo de respesta de las consulta al realizar
 un select a la misma.Esta tabla que expone la información detalladas de las transferecias de las empresa , se cargaria
 con un storeprocedure /dtsx .
-Los test junit los implemente sobre los controles , el obejitvo fue realizar pruebas de integración
-Falto implementar los test de dependencia; para ver si existe depencia circular , jars deprecados.El objetivo es que las
+    Los test junit los implemente sobre los controles , el obejitvo fue realizar pruebas de integración
+    Falto implementar los test de dependencia; para ver si existe depencia circular , jars deprecados.El objetivo es que las
 capas no esten acopladas con Archunit ; para estar alineado, con los criterios de arquitectura limpia.Como complemento
 al junit ,se le puede agregar un test simple d carga utilizando rest assured.
 
