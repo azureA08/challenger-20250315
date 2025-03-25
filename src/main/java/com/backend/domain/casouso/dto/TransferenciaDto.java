@@ -1,9 +1,11 @@
 package com.backend.domain.casouso.dto;
 
+import jakarta.validation.constraints.*;
 import lombok.Builder;
 import lombok.Data;
 
 import java.math.BigDecimal;
+import java.time.LocalDate;
 
 /***
  * DTTO del Contexto o informacion de un transferencia
