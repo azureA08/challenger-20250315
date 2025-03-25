@@ -75,13 +75,13 @@ DO ==> Implementaciones realizadas.
     # TODO  4. Reporteria y Tablero de Gestion Financiera.
     # TODO  5. Billetera Virtual , BV-00001.
     # TODO  6. billetera Web3 .
-    
+    ------------------------------------------------------------------------------------------------------------------------------------------------
     # TODO 
         WEB 3 https://remix-project.org/?lang=es
         Discovery sobre hard walle ? 
         Discovery Sobre 
             El protocolo de binance es pass + Google authenticator 
-    
+    -----------------------------------------------------------------------------------------------------------------------------------------------
     # DOING Discovery Wallet WEB3.
     
         Una billetera Web3 es esencial; para cualquiera que busque interactuar con aplicaciones descentralizadas (dApps) ,
