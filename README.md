@@ -1,6 +1,6 @@
-# challenger-20250315
+# POC -0001-20250315
 
-Challenger Sooft 2025
+POC -0001 Sooft 2025
 
 Challenge back:
 
@@ -64,4 +64,21 @@ Empresa empresaAdherida = empresaService.adherirEmpresa(empresa);
 return new ResponseEntity<>(empresaAdherida, HttpStatus.CREATED);
 }
 
-# Challenger 2025 Update 20250317.
+# POC -0001 2025 Update 20250317.
+# 
+# SISTEMA DE GESTION FINANCIERA 
+# DOING 1. ApiTransferencia Se refactoriza POC -0001 ;para implemenetar el api gateway de transferecias, proyecto Sistema de Gestion de transferencias SGT-08.
+# TODO  2. Api Payments /Pagos -Cobros y Activo extiende SGT-08.
+# TODO  3. Api Inversion gestion 
+# TODO  4. Billetera Virtual , BV-00001
+# TODO  5. billetera Web3
+
+# Wallet WEB3.
+    Una billetera Web3 es esencial; para cualquiera que busque interactuar con aplicaciones descentralizadas (dApps) ,
+o administrar criptomonedas. 
+
+    # Diferencia de las billeteras tradicionales.
+    Una billetera Web3 no es solo ;para almacenar criptomonedas; sino que permite interactuar directamente con la cadena de bloques,
+firmar transacciones, participar en finanzas descentralizadas (DeFi), acuñar NFT y más.
+
+POC -0001 2025 Update 20250325.
