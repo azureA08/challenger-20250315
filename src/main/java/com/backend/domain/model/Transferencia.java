@@ -8,7 +8,7 @@ import java.math.BigDecimal;
 import java.time.LocalDate;
 
 /***
- * Informacion del transferencia
+ * TransferenciaDetallermacion del transferencia
  */
 @Table(name = "transferencia")
 @Data

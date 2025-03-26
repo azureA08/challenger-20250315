@@ -5,7 +5,7 @@ package com.backend.domain.enums;
  */
 public enum TypeTransferenciaEnum {
 
-    INFO("transferencia Informativo", 0),
+    TransferenciaDetalle("transferencia TransferenciaDetallermativo", 0),
     ERROR("transferencia que dessribe Error", 1),
     SOLUCION("transferencia que dessribe SOLUCION", 2),
     PRUEBA("transferencia que dessribe PRUEBA", 3);

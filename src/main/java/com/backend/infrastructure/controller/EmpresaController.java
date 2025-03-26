@@ -30,10 +30,10 @@ public class EmpresaController {
             @ApiResponse(code = 500, message = "Error interno de servidor")})
     @PostMapping(produces = {MediaType.APPLICATION_JSON_VALUE, MediaType.APPLICATION_PROBLEM_JSON_VALUE}
     )
-    public ResponseEntity<Empresa> saveuser(@RequestBody Empresa empresa) {
+    public ResponseEntity<Empresa> saveEmpresa(@RequestBody Empresa empresa) {
         empresa.setId(0L);
-        Empresa saveduser = empresaService.save(empresa);
-        return new ResponseEntity<>(saveduser, HttpStatus.CREATED);
+        Empresa savedEmpresa = empresaService.save(empresa);
+        return new ResponseEntity<>(savedEmpresa, HttpStatus.CREATED);
     }
 
     //get a single empresa by its id
@@ -43,19 +43,19 @@ public class EmpresaController {
             @ApiResponse(code = 500, message = "Error interno de servidor")})
     @GetMapping(path = "{id}", produces = {MediaType.APPLICATION_JSON_VALUE, MediaType.APPLICATION_PROBLEM_JSON_VALUE}
     )
-    public ResponseEntity<Empresa> getuser(@RequestParam(name = "id") long id) {
-        Optional<Empresa> user = empresaService.findById(id);
-        return new ResponseEntity<Empresa>(user.orElse(null), HttpStatus.OK);
+    public ResponseEntity<Empresa> getEmpresa(@RequestParam(name = "id") long id) {
+        Optional<Empresa> Empresa = empresaService.findById(id);
+        return new ResponseEntity<Empresa>(Empresa.orElse(null), HttpStatus.OK);
     }
 
     //get all the products in the table in our database
-    @ApiOperation(value = "Buscar de los users . ", notes = "Buscar todos los users")
+    @ApiOperation(value = "Buscar de los Empresas . ", notes = "Buscar todos los Empresas")
     @ApiResponses(value = {@ApiResponse(code = 200, message = "la operación se ejecutó correctamente"),
             @ApiResponse(code = 400, message = "Algun parametro no cumple con el formato o es requerido y no esta presente"),
             @ApiResponse(code = 500, message = "Error interno de servidor")})
-    @GetMapping(path = "users", produces = {MediaType.APPLICATION_JSON_VALUE, MediaType.APPLICATION_PROBLEM_JSON_VALUE}
+    @GetMapping(path = "Empresas", produces = {MediaType.APPLICATION_JSON_VALUE, MediaType.APPLICATION_PROBLEM_JSON_VALUE}
     )
-    public List<Empresa> getusers() {
+    public List<Empresa> getEmpresas() {
         return empresaService.findAll();
     }
 
@@ -65,7 +65,7 @@ public class EmpresaController {
             @ApiResponse(code = 400, message = "Algun parametro no cumple con el formato o es requerido y no esta presente"),
             @ApiResponse(code = 500, message = "Error interno de servidor")})
     @PatchMapping(path = "{id}", produces = {MediaType.APPLICATION_JSON_VALUE, MediaType.APPLICATION_PROBLEM_JSON_VALUE})
-    public ResponseEntity<Empresa> upLocalDateuser(@RequestParam(name = "id") long id, @RequestBody Empresa empresa) {
+    public ResponseEntity<Empresa> upLocalDateEmpresa(@RequestParam(name = "id") long id, @RequestBody Empresa empresa) {
         empresa.setId(id);
         empresaService.upLocalDateEmpresa(id, empresa);
         return new ResponseEntity<>(empresa, HttpStatus.ACCEPTED);
@@ -80,10 +80,10 @@ public class EmpresaController {
     @DeleteMapping(path = "{id}", produces = {MediaType.APPLICATION_JSON_VALUE, MediaType.APPLICATION_PROBLEM_JSON_VALUE}
     )
 
-    public ResponseEntity<Empresa> deleteUser(@RequestParam(name = "id") long id) {
-        Empresa deleteduser = empresaService.findById(id).orElse(null);
+    public ResponseEntity<Empresa> deleteEmpresa(@RequestParam(name = "id") long id) {
+        Empresa deletedEmpresa = empresaService.findById(id).orElse(null);
         empresaService.deleteById(id);
-        return new ResponseEntity<>(deleteduser, HttpStatus.OK);
+        return new ResponseEntity<>(deletedEmpresa, HttpStatus.OK);
     }
 
 

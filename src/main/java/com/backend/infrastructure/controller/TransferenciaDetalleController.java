@@ -17,7 +17,7 @@ import java.util.Optional;
 
 
 @RestController
-@RequestMapping("api/info/")
+@RequestMapping("api/TransferenciaDetalle/")
 public class TransferenciaDetalleController {
 
     @Autowired
@@ -30,32 +30,32 @@ public class TransferenciaDetalleController {
             @ApiResponse(code = 500, message = "Error interno de servidor")})
     @PostMapping(produces = {MediaType.APPLICATION_JSON_VALUE, MediaType.APPLICATION_PROBLEM_JSON_VALUE}
     )
-    public ResponseEntity<TransferenciaDetalle> saveInfo(@RequestBody TransferenciaDetalle transferenciaDetalle) {
+    public ResponseEntity<TransferenciaDetalle> saveTransferenciaDetalle(@RequestBody TransferenciaDetalle transferenciaDetalle) {
         transferenciaDetalle.setId(0L);
         TransferenciaDetalle savedTransferenciaDetalle = transferenciaDetalleService.save(transferenciaDetalle);
         return new ResponseEntity<>(savedTransferenciaDetalle, HttpStatus.CREATED);
     }
 
-    //get a single info by its id
-    @ApiOperation(value = "Buscar de info por Id ", notes = "Buscar de info por Id")
+    //get a single TransferenciaDetalle by its id
+    @ApiOperation(value = "Buscar de TransferenciaDetalle por Id ", notes = "Buscar de TransferenciaDetalle por Id")
     @ApiResponses(value = {@ApiResponse(code = 200, message = "la operación se ejecutó correctamente"),
             @ApiResponse(code = 400, message = "Algun parametro no cumple con el formato o es requerido y no esta presente"),
             @ApiResponse(code = 500, message = "Error interno de servidor")})
     @GetMapping(path = "{id}", produces = {MediaType.APPLICATION_JSON_VALUE, MediaType.APPLICATION_PROBLEM_JSON_VALUE}
     )
-    public ResponseEntity<TransferenciaDetalle> getInfo(@RequestParam(name = "id") long id) {
-        Optional<TransferenciaDetalle> info = transferenciaDetalleService.findById(id);
-        return new ResponseEntity<TransferenciaDetalle>(info.orElse(null), HttpStatus.OK);
+    public ResponseEntity<TransferenciaDetalle> getTransferenciaDetalle(@RequestParam(name = "id") long id) {
+        Optional<TransferenciaDetalle> TransferenciaDetalle = transferenciaDetalleService.findById(id);
+        return new ResponseEntity<TransferenciaDetalle>(TransferenciaDetalle.orElse(null), HttpStatus.OK);
     }
 
     //get all the TransferenciaDetalle in the table in our database
-    @ApiOperation(value = "Buscar de toda la INFO . ", notes = "Buscar toda la TransferenciaDetalle")
+    @ApiOperation(value = "Buscar de toda la TransferenciaDetalle . ", notes = "Buscar toda la TransferenciaDetalle")
     @ApiResponses(value = {@ApiResponse(code = 200, message = "la operación se ejecutó correctamente"),
             @ApiResponse(code = 400, message = "Algun parametro no cumple con el formato o es requerido y no esta presente"),
             @ApiResponse(code = 500, message = "Error interno de servidor")})
-    @GetMapping(path = "infos", produces = {MediaType.APPLICATION_JSON_VALUE, MediaType.APPLICATION_PROBLEM_JSON_VALUE}
+    @GetMapping(path = "TransferenciaDetalles", produces = {MediaType.APPLICATION_JSON_VALUE, MediaType.APPLICATION_PROBLEM_JSON_VALUE}
     )
-    public List<TransferenciaDetalle> getInfos() {
+    public List<TransferenciaDetalle> getTransferenciaDetalles() {
         return transferenciaDetalleService.findAll();
     }
 
@@ -65,22 +65,22 @@ public class TransferenciaDetalleController {
             @ApiResponse(code = 400, message = "Algun parametro no cumple con el formato o es requerido y no esta presente"),
             @ApiResponse(code = 500, message = "Error interno de servidor")})
     @PatchMapping(path = "{id}", produces = {MediaType.APPLICATION_JSON_VALUE, MediaType.APPLICATION_PROBLEM_JSON_VALUE})
-    public ResponseEntity<TransferenciaDetalle> upLocalDateInfo(@RequestParam(name = "id") long id, @RequestBody TransferenciaDetalle transferenciaDetalle) {
+    public ResponseEntity<TransferenciaDetalle> upLocalDateTransferenciaDetalle(@RequestParam(name = "id") long id, @RequestBody TransferenciaDetalle transferenciaDetalle) {
         transferenciaDetalle.setId(id);
-        transferenciaDetalleService.upLocalDateInfo(id, transferenciaDetalle);
+        transferenciaDetalleService.upLocalDateTransferenciaDetalle(id, transferenciaDetalle);
         return new ResponseEntity<>(transferenciaDetalle, HttpStatus.ACCEPTED);
     }
 
 
-    // delete an existing info in the database
-    @ApiOperation(value = "Borrar  info por Id . ", notes = "Borrar info por Id . ")
+    // delete an existing TransferenciaDetalle in the database
+    @ApiOperation(value = "Borrar  TransferenciaDetalle por Id . ", notes = "Borrar TransferenciaDetalle por Id . ")
     @ApiResponses(value = {@ApiResponse(code = 200, message = "la operación se ejecutó correctamente"),
             @ApiResponse(code = 400, message = "Algun parametro no cumple con el formato o es requerido y no esta presente"),
             @ApiResponse(code = 500, message = "Error interno de servidor")})
     @DeleteMapping(path = "{id}", produces = {MediaType.APPLICATION_JSON_VALUE, MediaType.APPLICATION_PROBLEM_JSON_VALUE}
     )
 
-    public ResponseEntity<TransferenciaDetalle> deleteInfo(@RequestParam(name = "id") long id) {
+    public ResponseEntity<TransferenciaDetalle> deleteTransferenciaDetalle(@RequestParam(name = "id") long id) {
         TransferenciaDetalle deleteduser = transferenciaDetalleService.findById(id).orElse(null);
         transferenciaDetalleService.deleteById(id);
         return new ResponseEntity<>(deleteduser, HttpStatus.OK);

@@ -13,8 +13,8 @@ public interface TransfereciaMapper {
     TransfereciaMapper INSTANCE = Mappers.getMapper(TransfereciaMapper.class);
 
     @Mapping(source = "id", target = "id")
-    TrasferenciaDetalleDto docunetToDocumentDto(Transferencia transferencia);
+    TrasferenciaDetalleDto docunetToTransferenciaDto(Transferencia transferencia);
 
     @Mapping(source = "id", target = "id")
-    Transferencia documentDtoToDocument(TrasferenciaDetalleDto trasferenciaDetalleDto);
+    Transferencia TransferenciaDtoToTransferencia(TrasferenciaDetalleDto trasferenciaDetalleDto);
 }

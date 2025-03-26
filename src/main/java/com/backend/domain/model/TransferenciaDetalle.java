@@ -7,7 +7,7 @@ import lombok.NoArgsConstructor;
 import java.math.BigDecimal;
 
 /***
- * Contexto o informacion de cada transferencia
+ * Contexto o TransferenciaDetallermacion de cada transferencia
  * que integra un grupo
  */
 
@@ -21,7 +21,7 @@ public class TransferenciaDetalle {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    //Informacion de la empresa
+    //TransferenciaDetallermacion de la empresa
 
     @Column
     private String cuit;
@@ -29,11 +29,11 @@ public class TransferenciaDetalle {
     private String razonSocial;
     //private Calendar fechaAdhesion;
     //Fecha int yyyyMMDDDhhmmss  para facilitar ordenamiento,
-    // comparaciones y extraccion de info que expone la Api
+    // comparaciones y extraccion de TransferenciaDetalle que expone la Api
     @Column
     private int fechaAdhesion;
 
-    //Informacion de la transaccion asociada a una empresa
+    //TransferenciaDetallermacion de la transaccion asociada a una empresa
     @Column
     private BigDecimal importe;
     @Column
@@ -42,7 +42,7 @@ public class TransferenciaDetalle {
     private String cuentaCredito;
     //private Calendar fechaTransferencia;
     //Fecha int yyyyMMDDDhhmmss  para facilitar ordenamiento,
-    // comparaciones y extraccion de info que expone la Api
+    // comparaciones y extraccion de TransferenciaDetalle que expone la Api
     @Column
     private int fechaTransferencia;
 

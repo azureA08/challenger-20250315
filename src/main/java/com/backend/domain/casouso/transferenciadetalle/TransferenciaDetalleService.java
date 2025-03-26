@@ -15,7 +15,7 @@ public interface TransferenciaDetalleService {
 
     void deleteById(Long id);
 
-    TransferenciaDetalle upLocalDateInfo(long infoID, TransferenciaDetalle transferenciaDetalle);
+    TransferenciaDetalle upLocalDateTransferenciaDetalle(long TransferenciaDetalleID, TransferenciaDetalle transferenciaDetalle);
 
     List<TransferenciaDetalle> findByFechaCreacionBetween(int start, int end);
 }

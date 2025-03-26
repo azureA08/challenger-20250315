@@ -8,7 +8,7 @@ import java.math.BigDecimal;
 import java.time.LocalDate;
 
 /***
- * DTTO del Contexto o informacion de un transferencia
+ * DTTO del Contexto o TransferenciaDetallermacion de un transferencia
  */
 @Data
 @Builder

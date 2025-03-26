@@ -20,8 +20,8 @@ public class TransferenciaDetalleServiceImpl implements TransferenciaDetalleServ
 
 
     @Override
-    public TransferenciaDetalle upLocalDateInfo(long infoID, TransferenciaDetalle TransferenciaDetalle) {
-        TransferenciaDetalle transferenciaDetalleDB = this.findById(infoID).orElse(null);
+    public TransferenciaDetalle upLocalDateTransferenciaDetalle(long TransferenciaDetalleID, TransferenciaDetalle TransferenciaDetalle) {
+        TransferenciaDetalle transferenciaDetalleDB = this.findById(TransferenciaDetalleID).orElse(null);
         if (transferenciaDetalleDB.equals(null))
             this.save(TransferenciaDetalle);
         return TransferenciaDetalle;

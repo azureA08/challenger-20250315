@@ -23,22 +23,22 @@ public class TransferenciaController {
     @PostMapping
     public ResponseEntity<Transferencia> saveProduct(@RequestBody Transferencia transferencia) {
         transferencia.setId(0L);
-        Transferencia saveddocument = transferenciaService.save(transferencia);
-        return new ResponseEntity<>(saveddocument, HttpStatus.CREATED);
+        Transferencia savedTransferencia = transferenciaService.save(transferencia);
+        return new ResponseEntity<>(savedTransferencia, HttpStatus.CREATED);
     }
 
 
     //get a single transferencia by its id
     @GetMapping("/{id}")
-    public ResponseEntity<Transferencia> getdocument(@RequestParam(name = "id") long id) {
-        Optional<Transferencia> document = transferenciaService.findById(id);
-        return new ResponseEntity<Transferencia>(document.orElse(null), HttpStatus.OK);
+    public ResponseEntity<Transferencia> getTransferencia(@RequestParam(name = "id") long id) {
+        Optional<Transferencia> Transferencia = transferenciaService.findById(id);
+        return new ResponseEntity<Transferencia>(Transferencia.orElse(null), HttpStatus.OK);
     }
 
 
     //get all the transferencia in the table in our database
-    @GetMapping("/documents")
-    public List<Transferencia> getdocuments() {
+    @GetMapping("/Transferencias")
+    public List<Transferencia> getTransferencias() {
         return transferenciaService.findAll();
     }
 
@@ -46,17 +46,17 @@ public class TransferenciaController {
     //upLocalDate an existing transferencia in the database
     @PatchMapping
     public ResponseEntity<Transferencia> upLocalDateProduct(@RequestParam(name = "id") long id, @RequestBody Transferencia transferencia) {
-        Transferencia upLocalDateddocument = transferenciaService.upLocalDateTransferenia(id, transferencia);
-        return new ResponseEntity<>(upLocalDateddocument, HttpStatus.ACCEPTED);
+        Transferencia upLocalDatedTransferencia = transferenciaService.upLocalDateTransferenia(id, transferencia);
+        return new ResponseEntity<>(upLocalDatedTransferencia, HttpStatus.ACCEPTED);
     }
 
 
     // delete an existing transferencia in the database
     @DeleteMapping("/{id}")
     public ResponseEntity<Transferencia> deleteProduct(@RequestParam(name = "id") long id) {
-        Transferencia deleteddocument = transferenciaService.findById(id).orElse(null);
+        Transferencia deletedTransferencia = transferenciaService.findById(id).orElse(null);
         transferenciaService.deleteById(id);
-        return new ResponseEntity<>(deleteddocument, HttpStatus.OK);
+        return new ResponseEntity<>(deletedTransferencia, HttpStatus.OK);
     }
 
 
