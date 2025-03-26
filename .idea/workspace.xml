@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="50c68539-9574-413b-9a25-ee10848a15bd" name="Changes" comment="Discovery kickoff">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="50c68539-9574-413b-9a25-ee10848a15bd" name="Changes" comment="Fixs controller" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -63,65 +61,67 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;JUnit.ApiTransaccionDetalleServiceTest.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.ApiTransaccionDetalleTest.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.EmpresaControllerTest.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.EmpresaServiceTest.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.TransferenciaControllerTest.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.TransferenciaControllerTest.getTransferencia_shouldReturnOk.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.TransferenciaControllerTest.saveTransferencia_shouldReturnCreated.executor&quot;: &quot;Run&quot;,
-    &quot;Maven.challanger [clean].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.challanger [compile].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.challanger [install].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.challanger [org.apache.maven.plugins:maven-clean-plugin:3.3.2:clean].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.challanger [org.apache.maven.plugins:maven-compiler-plugin:3.13.0:compile].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.challanger [org.apache.maven.plugins:maven-surefire-plugin:3.2.5:test].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.challanger [org.springframework.boot:spring-boot-maven-plugin:3.3.10:run].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.challanger [org.springframework.boot:spring-boot-maven-plugin:3.3.10:start].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.challanger [org.springframework.boot:spring-boot-maven-plugin:3.3.10:stop].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.challanger [org.springframework.boot:spring-boot-maven-plugin:3.3.10:test-run].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.challanger [package].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.challanger [site:run].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.challanger [site].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.challanger [test].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.challanger [validate].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.challanger.executor&quot;: &quot;Run&quot;,
-    &quot;Maven.challenger2025-entrega [clean].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.challenger2025-entrega [compile].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.challenger2025-entrega [install].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.challenger2025-entrega [org.apache.maven.plugins:maven-clean-plugin:3.3.2:clean].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.challenger2025-entrega [org.apache.maven.plugins:maven-compiler-plugin:3.9.0:compile].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.challenger2025-entrega [org.apache.maven.plugins:maven-compiler-plugin:3.9.0:testCompile].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.challenger2025-entrega [org.apache.maven.plugins:maven-install-plugin:3.1.1:install].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.challenger2025-entrega [org.apache.maven.plugins:maven-install-plugin:3.1.3:install].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.challenger2025-entrega [org.apache.maven.plugins:maven-site-plugin:3.12.1:run].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.challenger2025-entrega [org.apache.maven.plugins:maven-site-plugin:3.12.1:site].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.challenger2025-entrega [org.springframework.boot:spring-boot-maven-plugin:3.1.0:run].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.challenger2025-entrega [org.springframework.boot:spring-boot-maven-plugin:3.2.2:run].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.challenger2025-entrega [org.springframework.boot:spring-boot-maven-plugin:3.3.10:run].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.challenger2025-entrega [org.springframework.boot:spring-boot-maven-plugin:3.3.2:run].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.challenger2025-entrega [package].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.challenger2025-entrega [site].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.challenger2025-entrega [test].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.challenger2025-entrega [validate].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.challenger2025-entrega [verify].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.sgf08 [install].executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/opt/repo/challenger-20250315&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.testRunning&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "JUnit.ApiTransaccionDetalleServiceTest.executor": "Run",
+    "JUnit.ApiTransaccionDetalleTest.executor": "Run",
+    "JUnit.EmpresaControllerTest.executor": "Run",
+    "JUnit.EmpresaServiceTest.executor": "Run",
+    "JUnit.TransferenciaControllerTest.executor": "Run",
+    "JUnit.TransferenciaControllerTest.getTransferencia_shouldReturnOk.executor": "Run",
+    "JUnit.TransferenciaControllerTest.saveTransferencia_shouldReturnCreated.executor": "Run",
+    "Maven.challanger [clean].executor": "Run",
+    "Maven.challanger [compile].executor": "Run",
+    "Maven.challanger [install].executor": "Run",
+    "Maven.challanger [org.apache.maven.plugins:maven-clean-plugin:3.3.2:clean].executor": "Run",
+    "Maven.challanger [org.apache.maven.plugins:maven-compiler-plugin:3.13.0:compile].executor": "Run",
+    "Maven.challanger [org.apache.maven.plugins:maven-surefire-plugin:3.2.5:test].executor": "Run",
+    "Maven.challanger [org.springframework.boot:spring-boot-maven-plugin:3.3.10:run].executor": "Run",
+    "Maven.challanger [org.springframework.boot:spring-boot-maven-plugin:3.3.10:start].executor": "Run",
+    "Maven.challanger [org.springframework.boot:spring-boot-maven-plugin:3.3.10:stop].executor": "Run",
+    "Maven.challanger [org.springframework.boot:spring-boot-maven-plugin:3.3.10:test-run].executor": "Run",
+    "Maven.challanger [package].executor": "Run",
+    "Maven.challanger [site:run].executor": "Run",
+    "Maven.challanger [site].executor": "Run",
+    "Maven.challanger [test].executor": "Run",
+    "Maven.challanger [validate].executor": "Run",
+    "Maven.challanger.executor": "Run",
+    "Maven.challenger2025-entrega [clean].executor": "Run",
+    "Maven.challenger2025-entrega [compile].executor": "Run",
+    "Maven.challenger2025-entrega [install].executor": "Run",
+    "Maven.challenger2025-entrega [org.apache.maven.plugins:maven-clean-plugin:3.3.2:clean].executor": "Run",
+    "Maven.challenger2025-entrega [org.apache.maven.plugins:maven-compiler-plugin:3.9.0:compile].executor": "Run",
+    "Maven.challenger2025-entrega [org.apache.maven.plugins:maven-compiler-plugin:3.9.0:testCompile].executor": "Run",
+    "Maven.challenger2025-entrega [org.apache.maven.plugins:maven-install-plugin:3.1.1:install].executor": "Run",
+    "Maven.challenger2025-entrega [org.apache.maven.plugins:maven-install-plugin:3.1.3:install].executor": "Run",
+    "Maven.challenger2025-entrega [org.apache.maven.plugins:maven-site-plugin:3.12.1:run].executor": "Run",
+    "Maven.challenger2025-entrega [org.apache.maven.plugins:maven-site-plugin:3.12.1:site].executor": "Run",
+    "Maven.challenger2025-entrega [org.springframework.boot:spring-boot-maven-plugin:3.1.0:run].executor": "Run",
+    "Maven.challenger2025-entrega [org.springframework.boot:spring-boot-maven-plugin:3.2.2:run].executor": "Run",
+    "Maven.challenger2025-entrega [org.springframework.boot:spring-boot-maven-plugin:3.3.10:run].executor": "Run",
+    "Maven.challenger2025-entrega [org.springframework.boot:spring-boot-maven-plugin:3.3.2:run].executor": "Run",
+    "Maven.challenger2025-entrega [package].executor": "Run",
+    "Maven.challenger2025-entrega [site].executor": "Run",
+    "Maven.challenger2025-entrega [test].executor": "Run",
+    "Maven.challenger2025-entrega [validate].executor": "Run",
+    "Maven.challenger2025-entrega [verify].executor": "Run",
+    "Maven.sgf08 [clean].executor": "Run",
+    "Maven.sgf08 [install].executor": "Run",
+    "Maven.sgf08 [org.springframework.boot:spring-boot-maven-plugin:3.3.4:run].executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/opt/repo/challenger-20250315",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "run.code.analysis.last.selected.profile": "pProject Default",
+    "settings.editor.selected.configurable": "reference.settings.project.maven.testRunning"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\opt\repo\challenger-20250315" />
@@ -570,7 +570,31 @@
       <option name="project" value="LOCAL" />
       <updated>1742944486030</updated>
     </task>
-    <option name="localTasksCounter" value="39" />
+    <task id="LOCAL-00039" summary="Discovery kickoff">
+      <option name="closed" value="true" />
+      <created>1742946971037</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1742946971038</updated>
+    </task>
+    <task id="LOCAL-00040" summary="Discovery kickoff">
+      <option name="closed" value="true" />
+      <created>1742946984606</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1742946984606</updated>
+    </task>
+    <task id="LOCAL-00041" summary="Fixs controller">
+      <option name="closed" value="true" />
+      <created>1742947337878</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1742947337878</updated>
+    </task>
+    <option name="localTasksCounter" value="42" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -585,7 +609,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Implementaciones adicionales" />
     <MESSAGE value="Fixs Implementaciones adicionales" />
     <MESSAGE value="Fixs Implementaciones junit" />
     <MESSAGE value="Implementaciones junit" />
@@ -610,7 +633,8 @@
     <MESSAGE value="Discovery POC" />
     <MESSAGE value="Discovery POC modif" />
     <MESSAGE value="Discovery kickoff" />
-    <option name="LAST_COMMIT_MESSAGE" value="Discovery kickoff" />
+    <MESSAGE value="Fixs controller" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixs controller" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -13,7 +13,7 @@ import java.util.Optional;
 
 
 @RestController
-@RequestMapping("api/transferencia")
+@RequestMapping("api/transferencia/")
 public class TransferenciaController {
 
     @Autowired
