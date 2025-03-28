@@ -21,7 +21,7 @@ public class Empresa {
     private String razonSocial;
     @Column(unique = true)
     private String cuit;
-    @Column(unique = true)
+    @Column
     private LocalDate fechaAdhesion;
 
     @OneToMany(mappedBy = "empresa")
