@@ -29,23 +29,20 @@ public class UtilsFecha {
 
     //
     public static int convertCalenderToInt(LocalDate localDate) {
-        ZonedDateTime zonedDateTime = localDate.atStartOfDay(ZoneId.systemDefault());
-        Instant instant = zonedDateTime.toInstant();
-        Date date = Date.from(instant);
-        Calendar calendar = Calendar.getInstance();
-        calendar.setTime(date);
-        return (calendar.get(Calendar.YEAR) + calendar.get(Calendar.MONTH) + calendar.get(Calendar.DAY_OF_MONTH));
+        int year = localDate.getYear();
+        int month = localDate.getMonthValue();
+        int day = localDate.getDayOfMonth();
+        return year * 10000 + month * 100 + day;
     }
 
     /***
      * @return Fecha actul como int ,formato yyyyMMDD
      */
     public Integer getFechaActual() {
-        long ts = System.currentTimeMillis() / 1000;
-        Date currentDate = new Date(ts);
-        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-mm-dd");
+        Date currentDate = new Date();
+        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyyMMdd");
         String fechaStr = dateFormat.format(currentDate);
-        return Integer.getInteger(fechaStr.replace("-", ""));
+        return Integer.parseInt(fechaStr);
     }
 
     //Ejemplo formatoFecha= "dd/MM/yyyy"

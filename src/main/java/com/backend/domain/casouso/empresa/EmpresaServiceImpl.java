@@ -55,7 +55,8 @@ public class EmpresaServiceImpl implements EmpresaService {
 
     // Punto 1 Uno que traiga las empresas que hicieron transferencias el último mes
     public List<Empresa> findEmpresasConTransferenciasUltimoMes() {
-        return empresaRepository.findEmpresasConTransferenciasUltimoMes();
+        LocalDate fechaInicioMesAnterior = YearMonth.now().minusMonths(1).atDay(1);
+        return empresaRepository.findEmpresasConTransferenciasUltimoMes(fechaInicioMesAnterior);
     }
 
     //2. Otro que traiga las empresas que se adhirieron el último mes.

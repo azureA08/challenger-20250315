@@ -7,7 +7,7 @@ import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 
 import java.math.BigDecimal;
-import java.time.LocalDateTime;
+import java.time.LocalDate;
 import java.util.List;
 
 @Repository
@@ -17,6 +17,6 @@ public interface TransferenciaRepository extends JpaRepository<Transferencia, Lo
     List<Transferencia> buscarPorImporteMayorQue(@Param("importeMinimo") BigDecimal importeMinimo);
 
     @Query("SELECT t FROM Transferencia t WHERE t.fechaTransferencia < :fechaLimite")
-    List<Transferencia> buscarPorFechaAnterior(@Param("fechaLimite") LocalDateTime fechaLimite);
+    List<Transferencia> buscarPorFechaAnterior(@Param("fechaLimite") LocalDate fechaLimite);
 
 }

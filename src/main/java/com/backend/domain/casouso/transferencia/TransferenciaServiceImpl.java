@@ -6,7 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.math.BigDecimal;
-import java.time.LocalDateTime;
+import java.time.LocalDate;
 import java.util.List;
 import java.util.Optional;
 
@@ -23,12 +23,13 @@ public class TransferenciaServiceImpl implements TransferenciaService {
 
 
     @Override
-    public Transferencia upLocalDateTransferenia(long TransferenciaID, Transferencia transferencia) {
-        Transferencia TransferenciaacionDB = this.findById(TransferenciaID).orElse(null);
-        if (TransferenciaacionDB.equals(null))
-            this.save(transferencia);
-        return transferencia;
-
+    public Transferencia upLocalDateTransferenia(long transferenciaId, Transferencia transferencia) {
+        Transferencia transferenciaDB = this.findById(transferenciaId).orElse(null);
+        if (transferenciaDB == null) {
+            return this.save(transferencia);
+        }
+        transferencia.setId(transferenciaId);
+        return this.save(transferencia);
     }
 
     @Override
@@ -53,7 +54,7 @@ public class TransferenciaServiceImpl implements TransferenciaService {
     }
 
     @Override
-    public List<Transferencia> buscarPorFechaAnterior(LocalDateTime fecha) {
+    public List<Transferencia> buscarPorFechaAnterior(LocalDate fecha) {
         return transferenciaRepository.buscarPorFechaAnterior(fecha);
     }
 

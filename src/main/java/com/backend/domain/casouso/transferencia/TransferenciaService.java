@@ -3,7 +3,7 @@ package com.backend.domain.casouso.transferencia;
 import com.backend.domain.model.Transferencia;
 
 import java.math.BigDecimal;
-import java.time.LocalDateTime;
+import java.time.LocalDate;
 import java.util.List;
 import java.util.Optional;
 
@@ -21,5 +21,5 @@ public interface TransferenciaService {
 
     List<Transferencia> buscarPorImporteMayorQue(BigDecimal importe);
 
-    List<Transferencia> buscarPorFechaAnterior(LocalDateTime fecha);
+    List<Transferencia> buscarPorFechaAnterior(LocalDate fecha);
 }

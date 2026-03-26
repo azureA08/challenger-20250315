@@ -1,5 +1,6 @@
 package com.backend.domain.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -24,6 +25,7 @@ public class Empresa {
     @Column
     private LocalDate fechaAdhesion;
 
+    @JsonIgnore
     @OneToMany(mappedBy = "empresa")
     private List<Transferencia> transferencias;
 
