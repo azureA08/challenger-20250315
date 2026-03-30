@@ -92,12 +92,12 @@ class EmpresaServiceTest {
     @Test
     void testFindEmpresasConTransferenciasUltimoMes() {
         List<Empresa> empresas = Arrays.asList(empresa);
-        when(empresaRepository.findEmpresasConTransferenciasUltimoMes()).thenReturn(empresas);
+        when(empresaRepository.findEmpresasConTransferenciasUltimoMes(any(LocalDate.class))).thenReturn(empresas);
 
         List<Empresa> foundEmpresas = empresaService.findEmpresasConTransferenciasUltimoMes();
 
         assertEquals(empresas, foundEmpresas);
-        verify(empresaRepository, times(1)).findEmpresasConTransferenciasUltimoMes();
+        verify(empresaRepository, times(1)).findEmpresasConTransferenciasUltimoMes(any(LocalDate.class));
     }
 
     @Test

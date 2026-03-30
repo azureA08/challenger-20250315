@@ -18,6 +18,7 @@ public class GlobalExceptionHandler {
         return ResponseEntity.status(userExeptions.getHttp()).body(apiResponseException);
     }
 
+    @ExceptionHandler(UserInvalidoException.class)
     public ResponseEntity<ResponseException> invalidProductEx(UserInvalidoException exeptions) {
         ResponseException apiResponseException = new ResponseException(exeptions.getMessage(), exeptions.getCode(), exeptions.getHttp());
         return ResponseEntity.status(exeptions.getHttp()).body(apiResponseException);

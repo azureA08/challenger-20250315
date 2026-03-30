@@ -11,7 +11,7 @@ import java.math.BigDecimal;
  * que integra un grupo
  */
 
-@Table(name = "transferencia-detalle")
+@Table(name = "transferencia_detalle")
 @Data
 @NoArgsConstructor
 @Entity
